@@ -1,4 +1,4 @@
-" judas.vim - Vim color scheme
+" sialoquent.vim - Vim color scheme
 " ----------------------------------------------------------
 " Author:   David Karlsson
 " Cred: Based on vim-hemisu ( https://github.com/noahfrederick/vim-hemisu )
@@ -11,14 +11,13 @@ if exists("syntax_on")
 endif
 
 " Declare theme name
-let g:colors_name = "judas"
+let g:colors_name = "sialoquent"
 
 " Define reusable colors
-let s:black            = { "gui": "#2B303B", "cterm": "16"  }
+let s:black            = { "gui": "#393f4c", "cterm": "16"  }
 let s:white            = { "gui": "#FFFFF2", "cterm": "231" }
 let s:error            = { "gui": "#E74C3C", "cterm": "231" }
 let s:almostWhite      = { "gui": "#C0C5CE", "cterm": "255" }
-let s:almostBlack      = { "gui": "#2B303B", "cterm": "233" }
 let s:middleDarkGrey   = { "gui": "#777777", "cterm": "241" }
 let s:middleLightGrey  = { "gui": "#999999", "cterm": "246" }
 let s:lightGrey        = { "gui": "#BBBBBB", "cterm": "249" }
@@ -29,7 +28,7 @@ let s:middleDarkPink   = { "gui": "#FF0055", "cterm": "197" }
 let s:middleLightPink  = { "gui": "#D65E76", "cterm": "167" }
 let s:lightPink        = { "gui": "#FFAFAF", "cterm": "217" }
 
-let s:darkBlue         = { "gui": "#005F87", "cterm": "24"  }
+let s:darkBlue         = { "gui": "#00838F", "cterm": "24"  }
 let s:middleDarkBlue   = { "gui": "#538192", "cterm": "24"  }
 let s:middleLightBlue  = { "gui": "#9FD3E6", "cterm": "116" }
 let s:lightBlue        = { "gui": "#CBE4EE", "cterm": "195" }
@@ -40,47 +39,28 @@ let s:darkTan          = { "gui": "#503D15", "cterm": "52"  }
 let s:lightTan         = { "gui": "#ECE1C8", "cterm": "230" }
 
 " Custom
+let s:almostBlack      = { "gui": "#393f4c", "cterm": "233" }
 let s:middleYellow     = { "gui": "#EBCB8B", "cterm": "149" }
 let s:lightGreen       = { "gui": "#A3BE8C", "cterm": "157" }
+let s:cyan             = { "gui": "#00838F", "cterm": "800" }
 
 " Assign to semantic categories based on background color
-if &background == "dark"
-  " Dark theme
-  let s:bg         = s:black
-  let s:norm       = s:almostWhite
-  let s:comment    = s:middleDarkGrey
-  let s:dimmed     = s:middleLightGrey
-  let s:subtle     = s:darkGrey
-  let s:faint      = s:almostBlack
-  let s:accent1    = s:middleLightBlue
-  let s:accent2    = s:middleYellow
-  let s:accent3    = s:lightGreen
-  let s:accent4    = s:lightTan
-  let s:normRed    = s:middleLightPink
-  let s:normGreen  = s:middleYellow
-  let s:normBlue   = s:middleLightBlue
-  let s:faintRed   = s:darkPink
-  let s:faintGreen = s:darkGreen
-  let s:faintBlue  = s:darkBlue
-else
-  " Light theme
-  let s:bg         = s:white
-  let s:norm       = s:almostBlack
-  let s:comment    = s:middleLightGrey
-  let s:dimmed     = s:middleDarkGrey
-  let s:subtle     = s:lightGrey
-  let s:faint      = s:almostWhite
-  let s:accent1    = s:middleDarkBlue
-  let s:accent2    = s:middleDarkGreen
-  let s:accent3    = s:middleDarkPink
-  let s:accent4    = s:darkTan
-  let s:normRed    = s:middleDarkPink
-  let s:normGreen  = s:middleDarkGreen
-  let s:normBlue   = s:middleDarkBlue
-  let s:faintRed   = s:lightPink
-  let s:faintGreen = s:lightGreen
-  let s:faintBlue  = s:lightBlue
-endif
+let s:bg         = s:black
+let s:norm       = s:almostWhite
+let s:comment    = s:middleDarkGrey
+let s:dimmed     = s:middleLightGrey
+let s:subtle     = s:darkGrey
+let s:faint      = s:almostBlack
+let s:accent1    = s:middleLightBlue
+let s:accent2    = s:middleYellow
+let s:accent3    = s:lightGreen
+let s:accent4    = s:lightTan
+let s:normRed    = s:middleLightPink
+let s:normGreen  = s:middleYellow
+let s:normBlue   = s:middleLightBlue
+let s:faintRed   = s:darkPink
+let s:faintGreen = s:darkGreen
+let s:faintBlue  = s:darkBlue
 
 "
 function! s:h(group, style)
@@ -123,7 +103,7 @@ call s:h("NonText",      { "fg": s:subtle })
 call s:h("Cursor",       { "fg": s:bg, "bg": s:accent3 })
 call s:h("Visual",       { "bg": s:faintBlue })
 call s:h("IncSearch",    { "bg": s:faintBlue })
-call s:h("Search",       { "bg": s:faintGreen })
+call s:h("Search",       { "bg": s:cyan })
 call s:h("StatusLine",   { "fg": s:norm, "bg": s:faint, "gui": "bold", "cterm": "bold" })
 call s:h("StatusLineNC", { "fg": s:dimmed, "bg": s:faint })
 call s:h("SignColumn",   { "fg": s:norm })
@@ -206,5 +186,3 @@ hi! link helpHyperTextJump   Underlined
 hi! link helpURL             Underlined
 
 
-
-" vim: fdm=marker:sw=2:sts=2:et
