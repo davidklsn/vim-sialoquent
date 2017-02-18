@@ -1,11 +1,11 @@
 # Sialoquent
 
     
-![alt text](img/screen.png "Screen")
+![alt text](img/js.png "js")
 
 #### Ruby
 
-![alt text](img/screen-ruby.png "Ruby")
+![alt text](img/ruby.png "Ruby")
 
 ### Installation  
 
