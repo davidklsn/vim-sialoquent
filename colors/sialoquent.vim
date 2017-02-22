@@ -21,7 +21,7 @@ let s:almostWhite      = { "gui": "#C0C5CE", "cterm": "255" }
 let s:middleDarkGrey   = { "gui": "#777777", "cterm": "241" }
 let s:middleLightGrey  = { "gui": "#999999", "cterm": "246" }
 let s:lightGrey        = { "gui": "#BBBBBB", "cterm": "249" }
-let s:darkGrey         = { "gui": "#444444", "cterm": "238" }
+let s:darkGrey         = { "gui": "#575C68", "cterm": "238" }
 
 let s:darkPink         = { "gui": "#63001C", "cterm": "88"  }
 let s:middleDarkPink   = { "gui": "#FF0055", "cterm": "197" }
@@ -39,10 +39,11 @@ let s:darkTan          = { "gui": "#503D15", "cterm": "52"  }
 let s:lightTan         = { "gui": "#ECE1C8", "cterm": "230" }
 
 " Custom
-let s:almostBlack      = { "gui": "#393f4c", "cterm": "233" }
+let s:almostBlack      = { "gui": "#00838F", "cterm": "233" }
 let s:middleYellow     = { "gui": "#EBCB8B", "cterm": "149" }
 let s:lightGreen       = { "gui": "#A3BE8C", "cterm": "157" }
 let s:cyan             = { "gui": "#00838F", "cterm": "800" }
+let s:grayLNr          = { "gui": "#575C68", "cterm": "238" }
 
 " Assign to semantic categories based on background color
 let s:bg         = s:black
@@ -61,6 +62,7 @@ let s:normBlue   = s:middleLightBlue
 let s:faintRed   = s:darkPink
 let s:faintGreen = s:darkGreen
 let s:faintBlue  = s:darkBlue
+let s:lineNr     = s:grayLNr
 
 "
 function! s:h(group, style)
